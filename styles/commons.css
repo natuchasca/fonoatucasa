@@ -176,8 +176,8 @@ img.portrait-img {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -215,7 +215,7 @@ img.portrait-img {
     height: 70vh;
   }
   .hero-caption {
-    padding: 20px 70px;
+    padding: 20px 90px;
   }
   .hero-caption h1 {
     max-width: 380px;

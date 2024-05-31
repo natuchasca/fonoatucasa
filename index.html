@@ -14,6 +14,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LVZ6V6BBCJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LVZ6V6BBCJ');
+  </script>
 </head>
 <body class="pt-5">
   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
@@ -21,10 +31,10 @@
       <a class="navbar-brand" href="#">
         <img src="./images/logo_gabi_aplicaciones_colored_inverted.png" class="logo-nav">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse offcanvas offcanvas-end" id="navbarScroll">
+      <div class="collapse navbar-collapse offcanvas offcanvas-end" id="offcanvasNavbar">
         <div class="offcanvas-header w-100 border-bottom">
           <a class="navbar-brand py-md-0" href="#">
             <img src="./images/logo_gabi_aplicaciones_colored_inverted.png" class="logo-nav">
@@ -50,7 +60,7 @@
                     Consulta Online
                   </h6>
                 </li>
-                <li><a class="dropdown-item" href="#">Consulta fonoaudiológica Online</a></li>
+                <li><a class="dropdown-item" href="#servicios">Consulta fonoaudiológica Online</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <h6 class="dropdown-header">
@@ -58,10 +68,10 @@
                     Consulta en Domicilio
                   </h6>
                 </li>
-                <li><a class="dropdown-item" href="#">Evaluación e intervención para niños y adolescentes</a></li>
-                <li><a class="dropdown-item" href="#">Evaluación e intervención para adulto mayor</a></li>
+                <li><a class="dropdown-item" href="#servicios">Evaluación e intervención para niños y adolescentes</a></li>
+                <li><a class="dropdown-item" href="#servicios">Evaluación e intervención para adulto mayor</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Otoscopia + Lavado de oídos</a></li>
+                <li><a class="dropdown-item" href="#servicios">Otoscopia + Lavado de oídos</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <a class="dropdown-item" href="#servicios">
@@ -72,7 +82,7 @@
               </ul>
             </li>
           </ul>
-          <ul class="list-unstyled list-inline footer-links mb-4 mb-md-0 d-flex justify-content-center justify-content-lg-end mx-lg-5 mx-auto">
+          <ul class="list-unstyled list-inline footer-links mb-4 mb-lg-0 d-flex justify-content-center justify-content-lg-end mx-lg-5 mx-auto">
             <li class="list-inline-item">
               <a aria-label="Visitar Facebook" class="social-button mr-1" href="mailto:flga.gabrielatorrejonb@gmail.com" rel="noopener noreferrer" target="_blank" title="Enviar email">
                 <i aria-hidden="true" class="far fa-envelope"></i>
@@ -152,13 +162,13 @@
           </p>
           <div class="row">
             <div class="col-md-6">
-              <div class="mb-2 d-flex align-items-center fw-bold fs-5">
+              <div class="mb-2 d-flex align-items-center fw-bold fs-5 lh-sm">
                 <span class="d-inline-block me-2">
                   <i class="fa-regular fa-face-laugh-wink fa-2x gradient-text"></i>
                 </span>
                 Atención Personalizada
               </div>
-              <div class="mb-2 d-flex align-items-center fw-bold fs-5">
+              <div class="mb-2 d-flex align-items-center fw-bold fs-5 lh-sm">
                 <span class="d-inline-block me-2">
                   <i class="fa-solid fa-puzzle-piece fa-2x gradient-text"></i>
                 </span>
@@ -166,13 +176,13 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="mb-2 d-flex align-items-center fw-bold fs-5">
+              <div class="mb-2 d-flex align-items-center fw-bold fs-5 lh-sm">
                 <span class="d-inline-block me-2">
                   <i class="fa-solid fa-house-chimney-user fa-2x gradient-text"></i>
                 </span>
                 En la comodidad de tu hogar
               </div>
-              <div class="mb-2 d-flex align-items-center fw-bold fs-5">
+              <div class="mb-2 d-flex align-items-center fw-bold fs-5 lh-sm">
                 <span class="d-inline-block me-2">
                   <i class="fa-solid fa-coins fa-2x gradient-text"></i>
                 </span>
@@ -363,5 +373,14 @@
       </div>
     </div>
   </div>
+  <script>
+    const navLinks = document.querySelectorAll('.navbar-nav a:not(.dropdown-toggle)');
+    const menuToggle = document.querySelector('#offcanvasNavbar');
+    navLinks.forEach((elem) => {
+      elem.addEventListener('click', () => {
+        $("button.navbar-toggler").click();
+      });
+    });
+  </script>
 </body>
 </html>
