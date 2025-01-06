@@ -170,7 +170,7 @@ img.portrait-img {
 .carousel-welcome .carousel-indicators button {
   border: none;
   background-color: rgba(202, 202, 202, 0.5);
-  margin: 0 2px;
+  margin: 0 5px;
   width: 15px;
   height: 15px;
   border-radius: 100%;
@@ -234,7 +234,6 @@ img.portrait-img {
 
 
 
-
 .card {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 20px;
@@ -248,9 +247,9 @@ img.portrait-img {
   transition: all 0.15s ease-in-out;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
-.hover-scale-card a {
+/*.hover-scale-card a {
   color: red;
-}
+}*/
 .hover-scale-card:hover,
 .hover-scale-card:focus,
 .hover-scale-card.active {
