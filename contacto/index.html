@@ -53,20 +53,78 @@
   <div class="container">
     <h1>Contáctanos</h1>
     <h2 class="fs-4 mb-4">Confía en Fono a tu Casa. Queremos ayudarte.</h2>
-    <iframe
-      id="JotFormIFrame-251735041711650"
-      title="Consultas Fono a tu casa"
-      onload="window.parent.scrollTo(0,0)"
-      allowtransparency="true"
-      allow="geolocation; microphone; camera; fullscreen; payment"
-      src="https://form.jotform.com/251735041711650"
-      frameborder="0"
-      style="min-width:100%;max-width:100%;height:539px;border:none;"
-      scrolling="no"
-    >
-    </iframe>
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-251735041711650']", "https://form.jotform.com/")</script>
+
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body p-md-5">
+            <form id="form-contacto" class="needs-validation" action="https://formsubmit.co/contacto@fonoatucasa.cl" method="POST" novalidate>
+              <div class="mb-3 text-start">
+                <label for="nombre" class="form-label fw-bold required">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="Nombre" placeholder="Nombre y Apellido" required>
+                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="email" class="form-label fw-bold required">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="Email" placeholder="user@email.com" required>
+                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="telefono" class="form-label fw-bold required">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="Teléfono" placeholder="+56 9 1234 5678" pattern="[0-9+ ()-]{7,}" required>
+                <div class="invalid-feedback">Ingresa un número de teléfono válido.</div>
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="servicio" class="form-label fw-bold required">Servicio</label>
+                <select class="form-select" id="servicio" name="Servicio" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option>Consulta Online</option>
+                  <option>Consulta domicilio infanto-juvenil y adolescentes</option>
+                  <option>Consulta domicilio adulto mayor</option>
+                  <option>Otoscopia + Lavado de oídos</option>
+                </select>
+                <div class="invalid-feedback">Selecciona un servicio.</div>
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="mensaje" class="form-label fw-bold required">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="Mensaje" rows="4" placeholder="Cuéntanos en qué te podemos ayudar." required></textarea>
+                <div class="invalid-feedback">Escribe un mensaje para enviar.</div>
+              </div>
+
+              <!-- Turnstile -->
+              <div class="cf-turnstile mb-3" data-sitekey="0x4AAAAAABkPbzpCh6xJw1dn"></div>
+
+              <!-- FormSubmit hidden options -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://fonoatucasa.cl/gracias">
+
+              <button type="submit" class="btn btn-primary rounded-pill border-0 gradient-bg fw-bold px-3 gradient-btn">Enviar mensaje</button>
+            </form>
+
+            <!-- Turnstile Script -->
+            <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+            <script>
+              // Validación Bootstrap
+              (() => {
+                const form = document.getElementById('form-contacto');
+                form.addEventListener('submit', event => {
+                  if (!form.checkValidity()) {
+                    event.preventDefault(); // Evita el envío
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                });
+              })();
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
