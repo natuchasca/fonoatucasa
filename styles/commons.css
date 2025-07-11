@@ -31,7 +31,8 @@ h1, h2, h3, h4, h5, h6,
     "YROT" 0;
 }
 
-p {
+p,
+.open-sans-font {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -146,7 +147,7 @@ img.logo-nav {
   width: 100px;
 }
 img.logo-footer {
-  width: 180px;
+  width: 150px;
 }
 img.portrait-img {
   width: 300px;
@@ -163,6 +164,8 @@ img.portrait-img {
 .carousel-welcome .carousel-item img {
   object-fit: cover;
   height: 100vh;
+  object-position: center center;
+  max-height: 600px;
 }
 .carousel-welcome .carousel-item:before {
   content: "";
@@ -234,6 +237,7 @@ img.portrait-img {
 @media (min-width: 992px) {
   .carousel-welcome .carousel-item {
     height: 70vh;
+    max-height: 600px;
   }
   .hero-caption {
     padding: 20px 90px;
