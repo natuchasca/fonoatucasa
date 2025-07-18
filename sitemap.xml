@@ -8,9 +8,33 @@
 
 <url>
   <loc>https://fonoatucasa.cl/</loc>
-  <lastmod>2024-08-14T22:28:10+00:00</lastmod>
+  <lastmod>2025-09-12</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>https://fonoatucasa.cl/fonoaudiologia-infantil-a-domicilio.html</loc>
+  <lastmod>2025-09-12</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://fonoatucasa.cl/fonoaudiologia-adulto-a-domicilio.html</loc>
+  <lastmod>2025-09-12</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://fonoatucasa.cl/otoscopia-y-lavado-oidos.html</loc>
+  <lastmod>2025-09-12</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://fonoatucasa.cl/fonoaudiologia-online.html</loc>
+  <lastmod>2025-09-12</lastmod>
+  <priority>0.8</priority>
 </url>
 
 
